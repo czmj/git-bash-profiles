@@ -1,0 +1,29 @@
+[core]
+	editor = nano
+	excludesfile = /Users/cjordan/.gitignore_global
+[user]
+	name = Clara Jordan
+	email = c.jordan@building-blocks.com
+[push]
+	default = simple
+
+# alias {{{
+[alias]
+	### general ###
+	cm = !git add -A && git commit -m
+	co = checkout
+	wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+
+	### typos ###
+	psuh = push 
+
+	### log ###
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	
+	### stash ###
+	sl = stash list
+	sa = stash apply
+	ss = stash save
+
+# }}}
